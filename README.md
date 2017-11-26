@@ -1,6 +1,16 @@
 Agency Jekyll theme
 ====================
 
+install ruby and gems:
+1) https://www.ruby-lang.org/en/downloads/
+2) https://rubygems.org/pages/download
+
+run:
+1) gem install jekyll bundler
+2) npm install -g live-server
+3) devserver.bat
+====================
+
 Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
 
 # How to use
