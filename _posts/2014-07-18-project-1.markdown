@@ -1,15 +1,15 @@
 ---
-title: Dreams
-subtitle: Website Design
+title: Greyhound races
+subtitle: Online betting solution
 layout: default
 modal-id: 1
 date: 2014-07-18
-img: dreams.png
-thumbnail: dreams-thumbnail.png
+img: greyhound.png
+thumbnail: greyhound-thumbnail.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
+project-date: 2017
+client: Hattrick Sports Group
 category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+description: Betting solution where players place bets on one or more out of six dogs that are racing at the track. Product is running within betting retail shops, betting terminals, as well as user browsers. Fully responsive web. Optimized for few thousand concurrent users. Besides standard and special bets, the game also features a progressive jackpot.
 
 ---
