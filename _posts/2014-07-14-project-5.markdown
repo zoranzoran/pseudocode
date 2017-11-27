@@ -1,6 +1,6 @@
 ---
 title: E-bussiness
-subtitle: Website Development
+subtitle: Web Development
 layout: default
 modal-id: 5
 date: 2014-07-14
