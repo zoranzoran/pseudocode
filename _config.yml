@@ -18,19 +18,6 @@ tech:
   pic: 3
   details: MS SQL Server
   
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: 
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: 
-  - title: bitbucket 
-    url: 
-  - title: github
-    url: 
-
 # Build settings
 markdown: kramdown
 permalink: pretty
