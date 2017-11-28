@@ -172,12 +172,19 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #1f4758;
+}
+
+.navbar-brand{
+    width: 240px;
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #{{ site.data.template.color.primary }};
+    /*font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;*/
+    font-family: 'Montserrat', sans-serif;
+    /*color: #{{ site.data.template.color.primary }};*/
+    color: #fff;
+    background: url(../img/pseudocode-logo.png) no-repeat center;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -208,7 +215,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 1px;
     color: #fff;
     -webkit-transition: all ease .35s;
@@ -257,7 +264,15 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        /*background: rgba(0,0,0,0.8);*/
+        background: rgba(31,71,88,1);
+        background: -moz-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(31,71,88,1)), color-stop(47%, rgba(76,142,157,1)), color-stop(100%, rgba(235,219,210,1)));
+        background: -webkit-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: -o-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: -ms-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: linear-gradient(to right, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f4758', endColorstr='#ebdbd2', GradientType=1 )
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -266,21 +281,39 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
+    position: relative;
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/header-bg-optimized.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    height: 100vh;
 }
 
+header:after{
+    position: absolute;
+    display: block;
+    content: "";
+    background: rgba(0, 0, 0, .15);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
 header .intro-text {
-    padding-top: 100px;
+    position: absolute;
+    z-index: 11;
     padding-bottom: 50px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 header .intro-text .intro-lead-in {
@@ -295,15 +328,18 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 700;
     line-height: 50px;
 }
 
 @media(min-width:768px) {
     header .intro-text {
+        position: relative;
         padding-top: 300px;
         padding-bottom: 200px;
+        top: auto;
+        transform: translateY(0);
     }
 
     header .intro-text .intro-lead-in {
@@ -325,15 +361,15 @@ header .intro-text .intro-heading {
 }
 
 section {
-    padding: 100px 0;
+    padding: 25px 0 0;
 }
 
 section h2.section-heading {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     font-size: 40px;
+    text-align: center;
 }
-
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
@@ -341,11 +377,23 @@ section h3.section-subheading {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
+    text-align: center;
 }
 
 @media(min-width:768px) {
+    section h2.section-heading,
+    section h3.section-subheading{
+        text-align: center;    
+    }
+}
+
+
+
+@media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 100px 0;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -640,6 +688,7 @@ section h3.section-subheading {
 .team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
+    max-width: 100px;
 }
 
 .team-member h4 {
@@ -657,10 +706,30 @@ aside.clients img {
 }
 
 section#contact {
+    position: relative;
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    background-image: url('{{ site.baseurl }}/img/contact-us-optimized.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    padding: 150px 0 50px;
+    display: block;
+}
+
+section#contact .container{
+    position: relative;
+    z-index: 11;
+}
+
+section#contact::after{
+    position: absolute;
+    display: block;
+    content: "";
+    background: rgba(0, 0, 0, .45);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 section#contact .section-heading {
@@ -731,6 +800,7 @@ footer span.copyright {
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
     line-height: 40px;
+    color: #fff;
 }
 
 footer ul.quicklinks {

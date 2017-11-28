@@ -1,14 +1,14 @@
 <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted"></h3>
+                    <h3 class="section-subheading text-muted">These companies trust us</h3>
                 </div>
             </div>
-            <div class="row">
-            {% for post in site.posts %}
+            <div class="row margin-b">
+            <!--{% for post in site.posts %}
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -23,7 +23,40 @@
                         <p class="text-muted">{{ post.subtitle }}</p>
                     </div>
                 </div>
-            {% endfor %}
+            {% endfor %}-->
+                 <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://hattrick.hr/hr" target="_blank">
+                        <img src="img/logos/hattrick.png" class="img-responsive img-centered portfolio-img" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://www.thrifty.com/" target="_blank">
+                        <img src="img/logos/LogoDT-web.png" class="img-responsive img-centered portfolio-img" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://www.tamigo.com/" target="_blank">
+                        <img src="img/logos/tamigo-logo-web.png" class="img-responsive img-centered portfolio-img" alt="">
+                    </a>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" target="_blank">
+                            <img src="img/logos/fabula-fortis-web.png" class="img-responsive img-centered portfolio-img" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" target="_blank">
+                            <img src="img/logos/factoryEdge-web.png" class="img-responsive img-centered portfolio-img" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" target="_blank">
+                            <img src="img/logos/bela-prvenstvo.png" class="img-responsive img-centered portfolio-img" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
