@@ -78,8 +78,10 @@ li {
 }
 
 @media(min-width:768px) {
-  right: 100px;
-  transform: translate(0, -50%);
+  .office-list__descritption {
+    right: 100px;
+    transform: translate(0, -50%);
+  }
 }
 
 .office-list__descritption h4,
