@@ -243,12 +243,20 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        padding: 10px 0;
         border: 0;
         background-color: transparent;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
+        background: rgba(0,0,0,0.8);
+        background: rgba(31,71,88,1);
+        background: -moz-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(31,71,88,1)), color-stop(47%, rgba(76,142,157,1)), color-stop(100%, rgba(235,219,210,1)));
+        background: -webkit-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: -o-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: -ms-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
+        background: linear-gradient(to right, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
     }
 
     .navbar-default .navbar-brand {
@@ -259,11 +267,12 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
+        border-radius: 0;
     }
 
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
+        padding: 0;
+        transition: all ease-in-out .3s;
         /*background: rgba(0,0,0,0.8);*/
         background: rgba(31,71,88,1);
         background: -moz-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
@@ -272,7 +281,6 @@ fieldset[disabled] .btn-xl.active {
         background: -o-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
         background: -ms-linear-gradient(left, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
         background: linear-gradient(to right, rgba(31,71,88,1) 0%, rgba(76,142,157,1) 47%, rgba(235,219,210,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f4758', endColorstr='#ebdbd2', GradientType=1 )
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -406,6 +414,7 @@ section h3.section-subheading {
     right: 0;
     margin: 0 0 15px;
     background: #f5f5f5;
+    box-shadow: 1px 1px 1px #e7e7e7;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -717,6 +726,7 @@ section#contact {
     background-repeat: no-repeat;
     padding: 150px 0 50px;
     display: block;
+    min-height: 100vh;
 }
 
 section#contact .container{

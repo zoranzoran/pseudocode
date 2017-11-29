@@ -112,11 +112,11 @@ li {
   display: inline-block;
 }
 
-.portfolio__client{
+.portfolio__client {
   text-align: right;
   margin-top: 20px;
 }
 
-.portfolio__subtitle{
+.portfolio__subtitle {
   margin-bottom: 20px!important;
 }
