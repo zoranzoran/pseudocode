@@ -5,7 +5,7 @@ layout: default
 modal-id: 1
 date: 2014-07-18
 img: greyhound.png
-thumbnail: greyhound-thumbnail.png
+thumbnail: hattrick-portfolio.jpg
 alt: image-alt
 project-date: 2017
 client: Hattrick Sports Group

@@ -8,55 +8,20 @@
                 </div>
             </div>
             <div class="row margin-b">
-            <!--{% for post in site.posts %}
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
+            {% for post in site.posts %}
+                <div class="col-md-12 col-sm-12 portfolio-item">
+                    <div class="col-md-6 col-sm-12">
+                    <!--<a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">-->
                         <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>{{ post.title }}</h4>
-                        <p class="text-muted">{{ post.subtitle }}</p>
+                    </div>
+                    <!--</a>-->
+                    <div class="portfolio-caption col-md-6 col-sm-12">
+                        <h4 class="portfolio__title">{{ post.title }}</h4>
+                        <p class="text-muted portfolio__subtitle">{{ post.subtitle }}</p>
+                        <p class="portfolio__description">{{ post.description }}</p>
+                        <!--<p class="portfolio__client">{{post.client}}</p>-->
                     </div>
                 </div>
-            {% endfor %}-->
-                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="http://hattrick.hr/hr" target="_blank">
-                        <img src="img/logos/hattrick.png" class="img-responsive img-centered portfolio-img" alt="">
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="https://www.thrifty.com/" target="_blank">
-                        <img src="img/logos/LogoDT-web.png" class="img-responsive img-centered portfolio-img" alt="">
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="http://www.tamigo.com/" target="_blank">
-                        <img src="img/logos/tamigo-logo-web.png" class="img-responsive img-centered portfolio-img" alt="">
-                    </a>
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#" target="_blank">
-                            <img src="img/logos/fabula-fortis-web.png" class="img-responsive img-centered portfolio-img" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#" target="_blank">
-                            <img src="img/logos/factoryEdge-web.png" class="img-responsive img-centered portfolio-img" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#" target="_blank">
-                            <img src="img/logos/bela-prvenstvo.png" class="img-responsive img-centered portfolio-img" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>

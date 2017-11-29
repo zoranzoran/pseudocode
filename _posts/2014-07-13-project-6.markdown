@@ -5,7 +5,7 @@ layout: default
 modal-id: 6
 date: 2014-07-15
 img: facegames.jpg
-thumbnail: facegames-thumbnail.jpg
+thumbnail: bela-portfolio.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap

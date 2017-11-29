@@ -51,6 +51,7 @@ li {
   position: relative;
 }
 
+
 /*.office-list__item:hover::after{
   position: absolute;
   content: "";
@@ -102,10 +103,20 @@ li {
   filter: grayscale(0%);
 }
 
-.portfolio-item{
+.portfolio-item {
   text-align: center;
+  padding: 50px;
 }
 
-.img-responsive{
+.img-responsive {
   display: inline-block;
+}
+
+.portfolio__client{
+  text-align: right;
+  margin-top: 20px;
+}
+
+.portfolio__subtitle{
+  margin-bottom: 20px!important;
 }

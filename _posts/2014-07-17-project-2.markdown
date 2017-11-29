@@ -5,7 +5,7 @@ layout: default
 modal-id: 2
 date: 2014-07-17
 img: tamigo.jpg
-thumbnail: tamigo-thumbnail.jpg
+thumbnail: tamigo-portfolio.jpg
 alt: image-alt
 project-date: 2017 - ongoing
 client: Tamigo

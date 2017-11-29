@@ -405,6 +405,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
+    background: #f5f5f5;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -455,7 +456,6 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 400px;
     text-align: center;
-    background-color: #fff;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -466,8 +466,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-caption p {
     margin: 0;
     font-family: {{ site.data.template.font.secondary }};
-    font-size: 16px;
-    font-style: italic;
+    font-size: 14px;
 }
 
 #portfolio * {
@@ -477,6 +476,11 @@ section h3.section-subheading {
 @media(min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
+        display: flex;
+        align-items: center;
+    }
+    #portfolio .portfolio-item .portfolio-caption {
+        text-align: left;
     }
 }
 

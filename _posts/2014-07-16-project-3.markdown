@@ -5,7 +5,7 @@ layout: default
 modal-id: 3
 date: 2014-07-16
 img: dollarThrifty.png
-thumbnail: dollarThrifty-thumbnail.png
+thumbnail: dt-portfolio.jpg
 alt: image-alt
 project-date: April 2014
 client: Dollar Thrifty
