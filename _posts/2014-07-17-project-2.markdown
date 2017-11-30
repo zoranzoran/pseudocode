@@ -1,6 +1,6 @@
 ---
 title: Schedule - Staff Management
-subtitle: Development work
+subtitle: Tamigo
 layout: default
 modal-id: 2
 date: 2014-07-17
@@ -10,6 +10,6 @@ alt: image-alt
 project-date: 2017 - ongoing
 client: Tamigo
 category: Web Development
-description: Improving existing application, in tight colaboration with client's development team.
-
+description: Continous work on clients SaaS multitenant application used by hundreds of thousands of employees everday.
+technologies: asp.net typescript knockout.js javascript sql
 ---
