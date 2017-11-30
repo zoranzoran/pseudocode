@@ -1,6 +1,6 @@
 ---
-title: Facebook applications
-subtitle: Social applications
+title: Realtime multiplayer facebook applications
+subtitle: Among the most popular applications on facebook
 layout: default
 modal-id: 6
 date: 2014-07-15
@@ -10,6 +10,6 @@ alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
 category: Web Development
-description: We created 6 Facebook live multiplayer card games, deeply integrated withing Facebook api. They are among most popular games on Facebook withing ex Yugoslavian user base.
-
+description: We have created 6 realtime multiplayer social applications which support thousands of simultaneous connections per day. All the applications have integrated virtual currencies and custom payment system.
+technologies: asp.net signalr javascript sql
 ---
