@@ -1,6 +1,6 @@
 ---
 title: Realtime multiplayer facebook applications
-subtitle: Among the most popular applications on facebook
+subtitle: Pseudocode
 layout: default
 modal-id: 6
 date: 2014-07-15
