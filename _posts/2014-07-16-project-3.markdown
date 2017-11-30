@@ -1,6 +1,6 @@
 ---
-title: Rent a car solution
-subtitle: Complete software solution
+title: Rent a Car business software
+subtitle: Dollar Thrifty
 layout: default
 modal-id: 3
 date: 2014-07-16
@@ -11,5 +11,5 @@ project-date: April 2014
 client: Dollar Thrifty
 category: Web Development
 description: Developed complete software solution for every aspect of running a rent a car bussiness in multiple countries.
-
+technologies: asp.net javascript sql
 ---
