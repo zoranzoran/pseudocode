@@ -1,6 +1,6 @@
 ---
-title: Greyhound races
-subtitle: Online betting solution
+title: Online betting solution
+subtitle: Hattrick Sports Group
 layout: default
 modal-id: 1
 date: 2014-07-18
@@ -11,5 +11,5 @@ project-date: 2017
 client: Hattrick Sports Group
 category: Web Development
 description: Betting solution where players place bets on one or more out of six dogs that are racing at the track. Product is running within betting retail shops, betting terminals, as well as user browsers. Fully responsive web. Optimized for few thousand concurrent users. Besides standard and special bets, the game also features a progressive jackpot.
-
+technologies: asp.net vue.js javascript sql rabbit mq
 ---
