@@ -9,7 +9,7 @@ thumbnail: trailsense.jpg
 alt: image-alt
 project-date: 2018
 client: TrailSense
-category: Native iOS
+category: mobile
 description: Native iOS application, built using Objective-C and Swift, leveraging 5 different Bluetooth sensors to track users location, speed, G forces, altitude etc.
-technologies: Objetive-C, Swift
+technologies: Native iOS, Objetive-C, Swift
 ---
