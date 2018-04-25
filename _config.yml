@@ -17,6 +17,9 @@ tech:
 - name: SQL
   pic: 3
   details: MS SQL Server
+- name: SharePoint
+  pic: 4
+  details: SharePoint
   
 # Build settings
 markdown: kramdown
