@@ -1,0 +1,14 @@
+---
+title: Booking system
+subtitle: BoatBikeTours
+layout: default
+modal-id: 1
+date: 2014-07-19
+img: trailsense.jpg
+thumbnail: bbt.png
+alt: image-alt
+project-date: 2018
+client: BoatBikeTours
+category: ASP.NET, SQL Server, Javascript, Vue.js
+description: Complete booking system with payment integration, for travel agency managing river boat tours.
+---
