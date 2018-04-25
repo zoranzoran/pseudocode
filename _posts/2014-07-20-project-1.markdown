@@ -9,6 +9,7 @@ thumbnail: bbt.png
 alt: image-alt
 project-date: 2018
 client: BoatBikeTours
-category: ASP.NET, SQL Server, Javascript, Vue.js
+category: web
 description: Complete booking system with payment integration, for travel agency managing river boat tours.
+technologies: ASP.NET, SQL Server, Javascript, Vue.js
 ---
