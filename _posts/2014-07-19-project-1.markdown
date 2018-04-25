@@ -1,0 +1,15 @@
+---
+title: Mountaing bike ride tracking
+subtitle: TrailSense
+layout: default
+modal-id: 1
+date: 2014-07-19
+img: trailsense.jpg
+thumbnail: trailsense.jpg
+alt: image-alt
+project-date: 2018
+client: TrailSense
+category: Native iOS
+description: Native iOS application, built using Objective-C and Swift, leveraging 5 different bluetooth sensors to track users location, speed, G forces, altitude etc.
+technologies: Objetive-C, Swift
+---
