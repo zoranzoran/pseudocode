@@ -1,6 +1,7 @@
 ---
 title: Online betting solution
 subtitle: Hattrick Sports Group
+clientCountry: um
 layout: default
 modal-id: 1
 date: 2014-07-18
