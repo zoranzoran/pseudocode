@@ -1,6 +1,7 @@
 ---
 title: Schedule - Staff Management
 subtitle: Tamigo
+clientCountry: dk
 layout: default
 modal-id: 2
 date: 2014-07-17
