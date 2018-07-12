@@ -11,6 +11,6 @@ alt: image-alt
 project-date: 2018
 client: Non disclosed
 category: mobile
-description: Native iOS application, built using Objective-C and Swift, leveraging 5 different Bluetooth sensors to track users location, speed, G forces, altitude etc.
+description: Within 3 months time we built native iOS app from scratch, based on mock screenshots provided by client. App UI and busines logic is built in Swift. Some code for communication to bluetooth senosrs was inherited in Objective-C. We succesfully fixed issues in old code, per client request, as well as gave feedback in every step of the way on how to improve app to be more effective from user's perspective. Application is gathering data from 5 different bluetooth sensors and internal GPS, logs the data, communicates to server when possible and shows relevant statistics per bicycle ride all in the same time.
 technologies: Native iOS, Objetive-C, Swift
 ---
