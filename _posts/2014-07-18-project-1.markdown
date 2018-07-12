@@ -1,6 +1,6 @@
 ---
-title: Online betting solution
-subtitle: Hattrick Sports Group
+title: Hattrick Sports Group
+subtitle: Online betting kiosk applications
 clientCountry: um
 layout: default
 modal-id: 1
