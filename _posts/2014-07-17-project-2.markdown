@@ -1,6 +1,6 @@
 ---
-title: Schedule - Staff Management
-subtitle: Tamigo
+title: Tamigo
+subtitle: HR - Schedule and Staff Management
 clientCountry: dk
 layout: default
 modal-id: 2
