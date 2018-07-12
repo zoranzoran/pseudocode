@@ -1,6 +1,6 @@
 ---
-title: Mountain bike ride tracking
-subtitle: undisclosed
+title: Nine Circle
+subtitle: Mountain bike ride tracking
 clientCountry: dk
 layout: default
 modal-id: 1
