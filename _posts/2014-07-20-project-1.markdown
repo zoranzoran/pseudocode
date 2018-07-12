@@ -11,6 +11,6 @@ alt: image-alt
 project-date: 2018
 client: BoatBikeTours
 category: web
-description: asdsds
+description: Amsterdam based travel agency specialized in full-service bike-boat holidays. Operating tours all across the Europe in more than 12 countries. In less than 3 months we built booking system from scratch which replaced the current product that Boat Bike Tours was using. The system is implemented as a web appliaction built with ASP.NET server technology, JavaScript and VueJS on the web client, SQL Server for the database and hosted in Amazon Web Services. Salesforce integration, which includes Sales Cloud for capturing sales processes from lead to closed deals, Service Cloud for maintaining customer relationship and ongoing support, and Marketing Cloud to gather new leads and drive new business. We are also integrating Salesforce CRM with new booking system to keep all customer related data in one place. 
 technologies: ASP.NET, SQL Server, Javascript, Vue.js
 ---
