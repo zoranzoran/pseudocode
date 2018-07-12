@@ -11,6 +11,6 @@ alt: image-alt
 project-date: 2017 - ongoing
 client: Tamigo
 category: Web Development
-description: Continous work on clients SaaS multitenant application used by hundreds of thousands of employees everday.
+description: We are doing continous work on clients SaaS multitenant application used by hundreds of thousands of employees every day. Our team is deeply integrated with client's team, involved in daily standups, agile sprints and sprint planning and reviews. Strength of our team is not only within techincal area, but in being deeply familiar with human resources domain.
 technologies: asp.net typescript knockout.js javascript sql
 ---
