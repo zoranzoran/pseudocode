@@ -1,6 +1,6 @@
 ---
-title: Booking system
-subtitle: BoatBikeTours
+title: Boat bike tours
+subtitle: Booking system
 clientCountry: nl
 layout: default
 modal-id: 1
