@@ -11,6 +11,6 @@ alt: image-alt
 project-date: 2017
 client: Hattrick Sports Group
 category: Web Development
-description: Betting solution where players place bets on one or more out of six dogs that are racing at the track. Product is running within betting retail shops, betting terminals, as well as user browsers. Fully responsive web. Optimized for few thousand concurrent users. Besides standard and special bets, the game also features a progressive jackpot.
+description: We did complete rewrite of legacy project, which was non maintainable for client's use case. Built using modern technologies and proper programming principles, so the product can be extended with new functionality, as well as brought to different platforms, not only to different kiosk configurations, but to native web client as well. Within first six months we finished replacement product, as was planned. Product is delivered to client ready for heavy load, in load balanced environment, covered with unit tests in critical parts of the application. We also built back-end solution, for use of client's employees to maintain critical configurations and overseeing critical logs.
 technologies: asp.net vue.js javascript sql rabbit mq
 ---
