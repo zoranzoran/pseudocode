@@ -525,20 +525,24 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="yourEmail" class="sr-only">Your email address</label>
-                        <input type="email" id="yourEmail" name="email" class="form-control" placeholder="Enter your email address">
+                        <input type="email" id="yourEmail" name="email" class="form-control" placeholder="Enter your email address" required data-validation-required-message="Please enter your email address.">
                     </div>
                     <div class="col-md-6">
                         <label for="yourName" class="sr-only">Your name</label>
-                        <input type="text" id="yourName" name="name" class="form-control" placeholder="Enter your name">
+                        <input type="text" id="yourName" name="name" class="form-control" placeholder="Enter your name"required data-validation-required-message="Please enter your name.">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="yourMessage" class="sr-only">Your message</label>
-                    <input type="text" class="form-control" id="yourMessage" name="message" placeholder="Tell us more about your project">
+                    <input type="text" class="form-control" id="yourMessage" name="message" placeholder="Tell us more about your project" required data-validation-required-message="Please enter a message.">
                 </div>
                 <button type="submit" class="btn btn-callout">Get in touch</button>
             </form>
+            <div class="section-header">
+                <h2 class="title"></h2>
+                <p class="lead" id="success"></p>
+            </div>
         </div><!-- /.container -->
 
     </section>
@@ -598,6 +602,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="assets/js/init.js"></script>
+    <script src="assets/js/jqBootstrapValidation.js"></script>
+    <script src="assets/js/contact_me.js"></script>
 
 </body>
 </html>
