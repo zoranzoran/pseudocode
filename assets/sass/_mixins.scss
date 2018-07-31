@@ -1,0 +1,215 @@
+// Convert PX to EM
+// https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function em( $pixels, $context: $font-size-root ) {
+    @return #{$pixels/$context}em;
+}
+
+// Calculate precentage from pixels
+@function calc-percent( $target, $container ) {
+    @return ( $target / $container ) * 100%;
+}
+
+@function calculate-rem( $size ) {
+    $remSize: $size / $font-size-root;
+    @return $remSize * 1rem;
+}
+
+@mixin polaroid-effect( $polaroidWidth : 10px ) {
+    background-color: #fff;
+    box-shadow: 0px 0px 0px $polaroidWidth #fff,
+                0px 0px 0px ( $polaroidWidth + 1px ) rgba(0,0,0,0.1),
+                0px 0px 5px ( $polaroidWidth + 4px ) rgba(0,0,0,0.05);
+}
+
+//
+// Creates CSS triangle
+// direction options: top, right, bottom, left.
+// Example @include cssTriangle(bottom, red, 50px);
+//
+@mixin css-triangle( $direction : left, $color : #89D4E7, $width : 34px ) {
+    $opposite: nth( ( top, right, bottom, left ), index( ( bottom, left, top, right), $direction ) );
+    border: solid $width transparent;
+    border-#{$direction}: none;
+    border-#{$opposite}: solid $width $color;
+}
+
+@mixin decoration-line( $position : 'top', $color : #000000, $width : 25px, $height : 3px ) {
+
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        position: absolute;
+        left: 0;
+        @if $position == 'top' {
+            top: 0;
+        } @else {
+            bottom: 0;
+        }
+    }
+}
+
+// For aspect ratio calculation
+// See the concept https://alistapart.com/article/creating-intrinsic-ratios-for-video
+@function calculate-ratio( $height : 0, $width : 0  ) {
+    $ratio: $height / $width * 100;
+    @return $ratio * 1%;
+}
+
+@mixin font-size( $size ) {
+    font-size: $size;
+    font-size: calculate-rem($size);
+}
+
+@mixin respond-min( $breakpoint ) {
+    @if map-has-key( $breakpoints, $breakpoint ) {
+        @media only screen and (min-width: #{map-get( $breakpoints, $breakpoint )}) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin respond-max( $breakpoint ) {
+    @if map-has-key( $breakpoints, $breakpoint ) {
+        @media only screen and (max-width: #{map-get( $breakpoints, $breakpoint )}) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// USAGE:
+//
+// @include keyframes(slide-down) {
+//     0% {
+//         opacity: 1;
+//     }
+//     90% {
+//         opacity: 0;
+//     }
+// }
+//
+// .element {
+//     @include animation('slide-down 5s 3');
+// }
+@mixin animation($str) {
+    animation: #{$str};
+}
+
+@mixin transition($args...) {
+    transition: $args;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:focus,
+    &:hover {
+        @content;
+    }
+}
+
+@mixin plain-hover-focus {
+    &,
+    &:focus,
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-focus-active {
+    &:focus,
+    &:active,
+    &:hover {
+        @content;
+    }
+}
+
+@mixin tab-focus() {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+@mixin screen-reader-text() {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}
+
+@mixin flex-width( $size ) {
+    flex: 0 0 $size;
+    max-width: $size;
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}

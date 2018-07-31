@@ -1,0 +1,290 @@
+// SVG Logo defaults
+.main-logo {
+    .logo-line {
+        fill: #2BB7DA;
+    }
+
+    .logo-text {
+        fill: #ffffff;
+    }
+}
+
+.main-logo--long {
+    width: 163px;
+    height: 54px;
+}
+
+.main-logo--short {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.main-nav {
+    background: $brand-primary;
+    text-align: center;
+    min-height: calc( 100vh - 70px );
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 24px;
+    line-height: 1;
+    font-family: $font-family-sans-serif-heavy;
+
+    li {
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            line-height: 1;
+            padding: 20px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 20px;
+                bottom: 0;
+                width: calc( 100% - 40px );
+                height: 2px;
+                background-color: $white;
+
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: all 0.3s ease-in-out 0s;
+            }
+
+            &:hover {
+                &:after {
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+            }
+
+            &,
+            &:visited,
+            &:active {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+        /*&.active {
+            a {
+                &:after {
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+            }
+        }*/
+    }
+}
+
+.menu-toggler {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background-color: $white;
+    border: 1px solid $white;
+    color: $brand-secondary;
+    margin: 0;
+    padding: 0;
+    outline: none!important;
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70px;
+        height: 70px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGg0OHY0OEgweiIvPjxwYXRoIGZpbGw9IiAjMGQxZTMzIiBkPSJNNiAzNmgzNnYtNEg2djR6bTAtMTBoMzZ2LTRINnY0em0wLTE0djRoMzZ2LTRINnoiLz48L3N2Zz4=);
+        background-size: 24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.open {
+        .menu-toggler__icon {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iICMwZDFlMzMiIGQ9Ik0zOCAxMi44M0wzNS4xNyAxMCAyNCAyMS4xNyAxMi44MyAxMCAxMCAxMi44MyAyMS4xNyAyNCAxMCAzNS4xNyAxMi44MyAzOCAyNCAyNi44MyAzNS4xNyAzOCAzOCAzNS4xNyAyNi44MyAyNHoiLz48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQ4djQ4SDB6Ii8+PC9zdmc+);
+            background-size: 24px 24px;
+            background-position: center;
+        }
+    }
+}
+
+.main-header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    height: 70px; // IE11 fix
+    transition: all 0.35s;
+    background: $white;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+
+    // Logo
+    .header-brand {
+        padding: 0 20px;
+        white-space: nowrap;
+        display: inline-block;
+
+        .main-logo--long {
+            width: 90px;
+            height: 30px;
+
+            .logo-text {
+                fill: $brand-secondary;
+            }
+        }
+    }
+}
+
+// Mobile menu content
+.header-collapse {
+    flex-basis: 100%;
+
+    &:not(.open) {
+        display: none;
+    }
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-video__overlay {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba( $brand-secondary, .90);
+    pointer-events: none;
+}
+
+// this is backup image
+.hero-image {
+    position: absolute;
+    background-image: url(../images/hero-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.hero-video__background {
+    background: $brand-secondary;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-video__foreground,
+.hero-video__background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .hero-video__foreground {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .hero-video__foreground {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+.hero-welcome {
+    min-height: calc(100vh + 70px);
+    height: 100px; // IE11 fix
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+
+    &__in {
+        min-height: 1px;
+        max-width: 1140px;
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .title {
+
+        font-size: 34px;
+        color: $white;
+        line-height: 1.2;
+        padding-bottom: 15px;
+
+        span {
+            display: block;
+        }
+
+        strong {
+            color: $brand-tertiary;
+        }
+    }
+
+    .lead {
+        line-height: 1.5;
+        font-size: 16px;
+        color: $white;
+        padding-bottom: 25px;
+    }
+}
+
+.btn-callout {
+    color: $white;
+    font-family: $font-family-sans-serif-heavy;
+    font-size: 18px;
+    line-height: 1;
+    color: $brand-primary;
+    border: 2px solid $brand-primary;
+    padding: .75em 1.25em;
+    background-color: transparent;
+    border-radius: 26px;
+    box-shadow: none!important;
+    outline: none;
+
+    &:hover,
+    &:active {
+        color: $white;
+        background-color: $brand-primary;
+    }
+}

@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Core CSS
+@import "scaffolding";
+@import "bootstrap";
+
+// Page parts
+@import "header";
+@import "main";
+@import "footer";
+
+// Responsive
+@import "responsive";

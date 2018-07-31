@@ -1,0 +1,33 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3611739, 2018-07-18T09:06:55-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Mont-Regular by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/mont/regular/
+ *
+ * Webfont: Mont-Heavy by Fontfabric
+ * URL: https://www.myfonts.com/fonts/font-fabric/mont/heavy/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3611739
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Modern and elegant sans serif font family.
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/371c5b");
+
+
+@font-face {font-family: 'Mont-Regular';src: url('mont/371C5B_0_0.eot');src: url('mont/371C5B_0_0.eot?#iefix') format('embedded-opentype'),url('mont/371C5B_0_0.woff2') format('woff2'),url('mont/371C5B_0_0.woff') format('woff'),url('mont/371C5B_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'Mont-Heavy';src: url('mont/371C5B_1_0.eot');src: url('mont/371C5B_1_0.eot?#iefix') format('embedded-opentype'),url('mont/371C5B_1_0.woff2') format('woff2'),url('mont/371C5B_1_0.woff') format('woff'),url('mont/371C5B_1_0.ttf') format('truetype');}

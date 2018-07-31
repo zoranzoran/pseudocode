@@ -1,0 +1,582 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	.project {
+		&-info {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.project {
+
+		margin-bottom: 50px;
+
+		&-media {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+
+		&--left {
+			.project-media {
+				padding-right: 15px;
+				text-align: right;
+			}
+
+			.project-info {
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+		}
+
+		&--right {
+			.project-media {
+				padding-left: 15px;
+				text-align: left;
+			}
+
+			.project-info {
+				margin-right: 50px;
+				margin-left: 50px;
+			}
+		}
+
+		&-media {
+			padding-top: 98px;
+		}
+
+		&-info {
+			padding-top: 50px;
+		}
+
+		.title {
+		    padding-bottom: 20px;
+		}
+
+		.subtitle {
+		    padding-bottom: 30px;
+		}
+	}
+
+	.testimonial {
+		flex-direction: row;
+		align-items: start;
+
+		&__body {
+			padding-left: 127px;
+			max-width: 100%;
+	        background-position: 30px 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.section {
+		&-header {
+			padding-bottom: 80px;
+			padding-left: 0;
+			padding-right: 0;
+
+			.title {
+				font-size: 48px;
+			}
+
+			.lead {
+				font-size: 18px;
+			}
+		}
+	}
+
+    .main-nav {
+		min-height: auto;
+	    flex-direction: row;
+	    align-items: center;
+        background: transparent;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: 0.2em;
+        padding: 0;
+        margin-right: 80px;
+
+        li {
+
+        	text-transform: uppercase;
+
+        	a {
+				padding: 14px 28px;
+				text-decoration: none;
+
+				&:after {
+                    left: 30px;
+                    bottom: -10px;
+                    width: calc( 100% - 60px );
+                    background-color: $brand-primary;
+				}
+        	}
+
+        	&.active {
+        		a {
+        			color: $brand-primary;
+
+        			&:after {
+		                visibility: hidden;
+		                transform: scaleX(0);
+        			}
+        		}
+        	}
+
+        	&.contact-btn {
+
+				padding-left: 30px;
+
+        		a {
+        			padding: 14px 24px;
+        			border-radius: 26px;
+        			border: 2px solid $white;
+        			transition: all 0.35s;
+
+        			&:hover {
+        				color: $brand-secondary;
+        				background-color: $white;
+        			}
+
+        			&:after {
+        				display: none;
+        			}
+        		}
+        	}
+
+        	&.contact-btn.active {
+        		a {
+        			color: $brand-secondary;
+        			background-color: $white;
+        		}
+        	}
+        }
+    }
+
+	.main-header {
+		flex-wrap: nowrap;
+		background: transparent;
+		top: 40px;
+
+	    // Logo
+	    .header-brand {
+	    	margin-left: 40px;
+	        padding: 0 20px 0 0;
+	        white-space: nowrap;
+	        display: inline-block;
+
+	        .main-logo--long {
+			    width: 163px;
+			    height: 54px;
+
+	            .logo-text {
+	                fill: $white;
+	            }
+	        }
+	    }
+
+
+	    // Short version on scroll
+	    &.short {
+	        top: 0;
+	        background: $brand-secondary;
+
+		    .header-brand {
+		    	margin-left: 20px;
+		        padding: 0 20px 0 0;
+		        white-space: nowrap;
+		        display: inline-block;
+
+		        .main-logo--long {
+				    display: none;
+		        }
+
+		        .main-logo--short {
+				    display: block;
+		        }
+		    }
+
+	        .main-nav {
+				font-size: 14px;
+				margin-right: 20px;
+
+				.contact-btn {
+					a {
+						padding: 10px 24px;
+					}
+				}
+	        }
+	    }
+	}
+
+	.header-collapse {
+	    flex-basis: auto;
+	    display: inline-block;
+
+	    &:not(.open) {
+	        display: inline-block;
+	    }
+	}
+
+	.menu-toggler {
+		display: none;
+	}
+
+	.custom-carousel {
+		.carousel-control-next,
+		.carousel-control-prev {
+			top: 0;
+			width: 98px;
+			height: 98px;
+		}
+
+		.carousel-control-prev {
+			left: 0;
+		}
+
+		.carousel-control-next {
+			right: auto;
+			left: 98px;
+		}
+
+		.carousel-control-next-icon,
+		.carousel-control-prev-icon {
+			width: 40px;
+			height: 40px;
+		}
+
+		&.about-carousel {
+			.carousel-control-next,
+			.carousel-control-prev {
+				right: auto;
+				left: 0;
+			}
+
+			.carousel-control-prev {
+				left: 0;
+				right: auto;
+			}
+
+			.carousel-control-next {
+				top: 98px;
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+
+	.testimonials {
+		padding-top: 160px;
+		padding-bottom: 160px;
+
+		.section-header {
+			padding-left: 20px;
+		}
+	}
+
+	.testimonial {
+		margin-left: 195px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.hero-welcome {
+
+		min-height: 100vh;
+		height: 100px; // IE11 fix
+
+		&__in {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+	    .title {
+
+	        font-size: 100px;
+	        line-height: 1.2;
+	        padding-bottom: 35px;
+
+	        span {
+	            display: block;
+	        }
+
+	        strong {
+
+	        }
+	    }
+
+	    .lead {
+	        line-height: 1.5;
+	        font-size: 24px;
+
+	        padding-bottom: 50px;
+	    }
+	}
+
+	.btn-callout {
+	    font-size: 24px;
+	    line-height: 30px;
+	    padding: 13px 54px;
+	    border-radius: 30px;
+	}
+
+	.projects {
+		padding-top: 150px;
+	}
+
+	.project {
+
+		margin-bottom: 125px;
+
+		&--left {
+			.project-media {
+				padding-right: 107px;
+				text-align: right;
+			}
+
+			.project-info {
+				margin-left: 120px;
+				margin-right: auto;
+			}
+		}
+
+		&--right {
+			.project-media {
+				padding-left: 107px;
+				text-align: left;
+			}
+
+			.project-info {
+				margin-right: 120px;
+				margin-left: auto;
+			}
+		}
+
+		&-media {
+			padding-top: 98px;
+		}
+
+		&-info {
+			max-width: 457px;
+			padding-top: 94px;
+		}
+
+		.title {
+		    font-size: 30px;
+		    line-height: 24px;
+		    padding-bottom: 15px;
+		}
+
+		.subtitle {}
+
+		.lead {
+		    font-size: 16px;
+		    line-height: 26px;
+		}
+	}
+
+	.testimonial {
+
+		&__body {
+	        background-position: 30px 40px;
+		}
+
+		.title {
+			padding-top: 40px;
+		}
+
+		.title,
+		.subtitle {
+			padding-right: 0;
+
+		}
+
+		.title {
+			font-size: 30px;
+			line-height: 24px;
+			margin-top: -3px;
+			padding-bottom: 15px;
+		}
+
+		.subtitle {
+			font-size: 16px;
+			line-height: 24px;
+			padding-bottom: 20px;
+		}
+
+		.lead {
+
+			font-size: 16px;
+			line-height: 26px;
+			padding-bottom: 30px;
+		}
+	}
+
+
+	.carousel-captions {
+		z-index: 15;
+		position: absolute;
+		display: block;
+		bottom: 70px;
+		right: -98px;
+		width: auto;
+		font-size: 18px;
+		padding: 25px 50px;
+	}
+
+	.about {
+		background-color: $brand-secondary;
+
+		&-info {
+			padding: 117px 0 0 0;
+			margin-left: 127px;
+
+			.title {
+				padding-bottom: 30px;
+				font-size: 48px;
+			}
+
+			.lead {
+
+				font-size: 18px;
+				padding-bottom: 20px;
+
+				p {
+					padding-bottom: 30px;
+					line-height: 24px;
+				}
+			}
+
+			.text-right {
+				text-align: right !important;
+			}
+		}
+	}
+
+
+	.contact {
+		background-color: $brand-grey-lightest;
+		padding-top: 160px;
+		padding-bottom: 160px;
+		overflow: hidden;
+
+		.section-header {
+			padding-bottom: 0;
+
+			.title {
+				padding-bottom: 25px;
+			}
+
+			.lead {
+				padding-bottom: 10px;
+				font-size: 18px;
+				line-height: 1;
+			}
+		}
+	}
+
+
+	.contact-form {
+
+		padding-left: 0;
+		padding-right: 0;
+
+		.form-control {
+			margin-bottom: 20px;
+		}
+
+		.form-control {
+			padding: 14px 0;
+			font-size: 1.25rem;
+		}
+
+		.form-group {
+			padding-bottom: 10px;
+		}
+	}
+
+	.footer {
+	    padding-top: 80px;
+	    padding-bottom: 80px;
+    	padding-left: 0;
+    	padding-right: 0;
+
+	    .title {
+	        font-size: 16px;
+	        line-height: 24px;
+	        padding-bottom: 25px;
+	    }
+
+	    .lead {
+	        font-size: 16px;
+	        line-height: 24px;
+
+	        p {
+	            margin: 0;
+	            padding: 0;
+
+	            &:not(:last-child) {
+	                padding-bottom: 25px;
+	            }
+	        }
+
+	        &.copyleft {
+	            text-align: right;
+	            padding-top: 50px;
+	        }
+	    }
+	}
+
+	.footer-brand {
+	    padding-bottom: 0;
+	}
+
+	.custom-carousel {
+		&.about-carousel {
+			.carousel-control-next,
+			.carousel-control-prev {
+				right: auto;
+				left: 0;
+			}
+
+			.carousel-control-prev {
+				left: 0;
+				right: auto;
+			}
+
+			.carousel-control-next {
+				top: 0;
+				right: auto;
+				left: 98px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+
+	.main-header {
+		top: 80px;
+
+	    .header-brand {
+	    	margin-left: 80px;
+	    }
+	}
+}
