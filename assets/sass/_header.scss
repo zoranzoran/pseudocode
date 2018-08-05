@@ -23,13 +23,14 @@
 .main-nav {
     background: $brand-primary;
     text-align: center;
-    min-height: calc( 100vh - 70px );
+    min-height: calc( 100vh - 70px ); // calc( 100vh - 70px )
     list-style: none;
     padding: 10px 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
     font-size: 24px;
     line-height: 1;
     font-family: $font-family-sans-serif-heavy;
@@ -57,7 +58,6 @@
 
                 visibility: hidden;
                 transform: scaleX(0);
-                transition: all 0.3s ease-in-out 0s;
             }
 
             &:hover {
@@ -133,6 +133,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    &.short {
+        transition: none!important;
+    }
 
 
     // Logo
@@ -243,6 +247,7 @@
         flex-grow: 1;
         padding-left: 44px;
         padding-right: 44px;
+        margin: auto;
     }
 
     .title {

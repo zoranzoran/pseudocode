@@ -45,15 +45,29 @@ jQuery(document).ready(function($) {
     });
 
 
+    function repositionMainHeader() {
+        let headerPosition = $header.position();
+        let windowPosition = $(window).scrollTop();
+
+        if ( windowPosition > headerPosition.top ) {
+            $header.addClass('short');
+        } else {
+            $header.removeClass('short');
+        }
+    }
+
     if ( $(window).width() > 991.9 ) {
 
         /**
          * Animated header
          */
-        $header.waypoint( function() {
-            $( this.element ).toggleClass('short');
-            $('#mainNav > li').removeClass('active');
-        }, { offset : 40 });
+        $(window).scroll(function() {
+            repositionMainHeader();
+        });
+
+        $(document).ready(function() {
+            repositionMainHeader();
+        });
 
         /**
          * Remove active classes
@@ -64,13 +78,12 @@ jQuery(document).ready(function($) {
 
     } else {
 
-
-
         /**
          * Close the mobile menu on link click
          */
         $('#mainNav > li > a').on('click', function() {
-            $('#menuToggler').trigger('click');
+            $headerCollapse.slideUp().removeClass('open');
+            $menuToggler.attr( 'aria-expanded', false ).removeClass('open');
         });
     }
 
@@ -92,14 +105,26 @@ jQuery(document).ready(function($) {
     });
 
 
+    // To fix focus poblem on Chrome mobile
+    $.fn.focusNoScroll = function() {
+        var x = window.scrollX,
+            y = window.scrollY;
+
+        this.focus();
+        window.scrollTo(x, y);
+
+        return this;
+    };
+
+
     /**
      * Smooth scroll. For back to top target #wrapper
      */
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click( function( event ) {
         if ( location.pathname.replace( /^\//, '' ) == this.pathname.replace( /^\//, '' ) && location.hostname == this.hostname ) {
 
-            let $this = $(this),
-                target = $( this.hash );
+            let $this = $(this);
+            let target = $( this.hash );
 
             target = target.length ? target : $( '[name=' + this.hash.slice( 1 ) + ']' );
 
@@ -112,16 +137,16 @@ jQuery(document).ready(function($) {
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
 
-                $( 'html, body' ).animate( {
+                $( 'html, body' ).animate({
                     scrollTop: ( target.offset().top - offset )
                 }, 1000, function() {
-                    var $target = $( target );
-                    $target.focus();
+                    let $target = $( target );
+                    $target.focusNoScroll();
                     if ( $target.is( ":focus" ) ) {
                         return false;
                     } else {
                         $target.attr( 'tabindex', '-1' );
-                        $target.focus();
+                        $target.focusNoScroll();
                     };
                 });
             }
