@@ -27,7 +27,6 @@
 	overflow: hidden;
 }
 
-
 .project {
 
 	// remove grid spacing
@@ -48,11 +47,25 @@
 		text-align: center;
 		background-color: $white;
 		background-repeat: no-repeat;
+		background-position: right bottom;
+		//background-size: cover;
 		position: relative;
 
 		img {
 			position: relative;
 			z-index: 5;
+		}
+	}
+
+	&--left {
+		.project-media {
+			background-position: right bottom;
+		}
+	}
+
+	&--right {
+		.project-media {
+			background-position: left bottom;
 		}
 	}
 
@@ -116,6 +129,8 @@
 	}
 }
 
+.testimonial-test {}
+
 .testimonial {
 	display: flex;
 	flex-direction: column;
@@ -130,7 +145,7 @@
 	}
 
 	&__body {
-		margin-left: 44px;
+		margin-left: 44px; // 44px
 		margin-right: 44px;
 		padding-left: 0;
 		max-width: 360px;
