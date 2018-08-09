@@ -83,13 +83,16 @@
         </div>
 
         <div class="hero-video__overlay"></div>
-        <div id="heroImage" class="hero-image"></div>
+        <div id="heroImage" class="hero-image d-block d-md-none"></div>
 
-        <!--<div class="hero-video__background">
+        <div class="hero-video__background">
             <div class="hero-video__foreground">
-                <div id="player"></div>
+                <video loop muted autoplay poster="assets/video/pseudocode.jpg">
+                    <source src="assets/video/pseudocode.mp4" type="video/mp4">
+                    <source src="assets/video/pseudocode.webm" type="video/webm">
+                </video>
             </div>
-        </div>-->
+        </div>
 
 	</section>
 
@@ -288,7 +291,7 @@
         </div><!--/.collapse-->
 
         <div class="load-more text-center">
-            <a data-toggle="collapse" href="#moreProjects" role="button" aria-expanded="false" aria-controls="moreProjects" class="btn btn-callout">Load more ...</a>
+            <a data-toggle="collapse" href="#moreProjects" role="button" aria-expanded="false" aria-controls="moreProjects" class="btn btn-callout" id="btnMoreProjects">Load more ...</a>
         </div>
 
     </section>
@@ -472,17 +475,29 @@
             <div class="about-carousel-wrap">
 
                 <div id="aboutCaptions" class="carousel-captions">
-                    <div id="aboutCaption-0" class="carousel-captione"><strong>Pseudocode &mdash;</strong> Casual Friday</div>
-                    <div id="aboutCaption-1" class="carousel-captione"><strong>Pseudocode &mdash;</strong> Casual Saturday</div>
+                    <div id="aboutCaption-0" class="carousel-captione"><strong>Pseudocode &mdash;</strong> 1</div>
+                    <div id="aboutCaption-1" class="carousel-captione"><strong>Pseudocode &mdash;</strong> 2</div>
+                    <div id="aboutCaption-2" class="carousel-captione"><strong>Pseudocode &mdash;</strong> 3</div>
+                    <div id="aboutCaption-3" class="carousel-captione"><strong>Pseudocode &mdash;</strong> 4</div>
+                    <div id="aboutCaption-4" class="carousel-captione"><strong>Pseudocode &mdash;</strong> 5</div>
                 </div>
 
-                <div id="aboutCarousel" class="carousel slide custom-carousel about-carousel" data-ride="carousel">
+                <div id="aboutCarousel" class="carousel slide custom-carousel about-carousel" data-ride="carousel" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="assets/images/about-01.jpg">
+                            <img class="d-block w-100" src="assets/images/about_4.jpg">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/about-01.jpg">
+                            <img class="d-block w-100" src="assets/images/about_2.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/about_3.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/about_1.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/about_5.jpg">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
@@ -526,11 +541,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="yourEmail" class="sr-only">Your email address</label>
-                        <input type="email" id="yourEmail" name="yourEmail" class="form-control" placeholder="Enter your email address">
+                        <input type="email" id="yourEmail" name="yourEmail" class="form-control is-valid" placeholder="Enter your email address">
                     </div>
                     <div class="col-md-6">
                         <label for="yourName" class="sr-only">Your name</label>
-                        <input type="text" id="yourName" name="yourName" class="form-control" placeholder="Enter your name">
+                        <input type="text" id="yourName" name="yourName" class="form-control is-invalid" placeholder="Enter your name">
                     </div>
                 </div>
 
@@ -538,13 +553,13 @@
                     <label for="yourMessage" class="sr-only">Your message</label>
                     <input type="text" class="form-control" id="yourMessage" placeholder="Tell us more about your project">
                 </div>
-                <button type="submit" class="btn btn-callout">Get in touch</button>
+                <button type="submit" class="btn btn-callout">Get in touch</button> <button disabled="" type="button" class="btn btn-callout is-valid">I will, thank you!</button>
             </form>
         </div><!-- /.container -->
 
     </section>
 
-    <footer class="footer" id="footer">
+    <footer class="section footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
@@ -597,6 +612,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/init.js"></script>
 
