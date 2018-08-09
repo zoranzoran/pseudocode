@@ -1,5 +1,6 @@
 .footer {
     padding: 40px;
+    background-color: $white;
 
     .title {
         font-size: 13px;
@@ -29,18 +30,23 @@
     a {
         position: relative;
 
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 1px;
+            background-color: $brand-gray;
+            opacity: 0;
+        }
+
         &:hover {
             color: $brand-gray;
             text-decoration: none;
 
             &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -5px;
-                width: 100%;
-                height: 1px;
-                background-color: $brand-gray;
+                opacity: 1;
             }
         }
     }

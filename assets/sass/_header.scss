@@ -167,6 +167,8 @@
 
 .hero {
     position: relative;
+    width: 100%;
+    height: 100%;
     min-height: 100vh;
     z-index: 1;
     overflow: hidden;
@@ -179,7 +181,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba( $brand-secondary, .90);
+    background-color: rgba( $brand-secondary, .85);
     pointer-events: none;
 }
 
@@ -208,13 +210,16 @@
 }
 
 .hero-video__foreground,
-.hero-video__background iframe {
+.hero-video__background iframe,
+.hero-video__background video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -232,7 +237,8 @@
 }
 
 .hero-welcome {
-    min-height: calc(100vh + 70px);
+    min-height: 100vh;
+    padding-top: 70px;
     height: 100px; // IE11 fix
     position: relative;
     display: flex;
@@ -287,9 +293,31 @@
     box-shadow: none!important;
     outline: none;
 
+    transition: $btn-transition;
+
     &:hover,
     &:active {
         color: $white;
         background-color: $brand-primary;
+    }
+
+    &.is-valid {
+        background-color: $white;
+        border-color: #319d21;
+        color: #319d21;
+
+        &::placeholder {
+            color: #319d21;
+        }
+    }
+
+    &.is-invalid {
+        background-color: $white;
+        border-color: #fb0102;
+        color: #fb0102;
+
+        &::placeholder {
+            color: #fb0102;
+        }
     }
 }

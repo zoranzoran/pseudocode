@@ -1,6 +1,7 @@
 .section {
 	position: relative;
 	z-index: 10;
+	background-color: $white;
 
 	&-header {
 		padding-bottom: 50px;
@@ -74,8 +75,21 @@
 		padding-top: 44px;
 		padding-left: 44px;
 		padding-right: 44px;
+		padding-bottom: 35px;
 		margin-left: auto;
 		margin-right: auto;
+		position: relative;
+
+		&:after {
+			content: '';
+			width: 80px;
+			height: 2px;
+			background-color: #cccccc;
+			position: absolute;
+			bottom: 45px;
+			left: 50%;
+			margin-left: -40px;
+		}
 	}
 
 	.title {
@@ -102,6 +116,19 @@
 	    	margin: 0;
 	    	padding: 0 0 20px;
 	    }
+	}
+}
+
+.projects {
+	.project.last-visible {
+		.project-info {
+
+			padding-bottom: 0;
+
+			&:after {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -158,7 +185,7 @@
 
 	.title,
 	.subtitle {
-		padding-right: 70px;
+		padding-right: 80px;
 		padding-bottom: 20px;
 	}
 
@@ -209,6 +236,7 @@
 		text-align: center;
 		opacity: 1;
 		border: 0;
+		transition: all 0.35s;
 	}
 
 	.carousel-control-prev {
@@ -278,7 +306,7 @@
 		text-align: center;
 
 		svg {
-			max-width: 160px;
+			max-width: 120px; //160
 			height: auto;
 			margin-top: -8px;
 			margin-left: auto;
@@ -290,7 +318,11 @@
 		flex: 1;
 
 		@media (min-width: 992px) {
-			padding-left: 40px;;
+			padding-left: 20px;
+		}
+
+		@media (min-width: 1200px) {
+			padding-left: 40px;
 		}
 	}
 
@@ -401,6 +433,12 @@ ul.services-list {
 
 	    @media (min-width: 1600px) {
 			padding: 80px;
+
+			.service__media {
+				svg {
+					max-width: 160px;
+				}
+			}
 	    }
 	}
 }
@@ -439,12 +477,12 @@ ul.services-list {
 	line-height: 1;
 	color: $white;
 	width: 100%;
+	height: 44px;
 	text-align: center;
 }
 
 .carousel-captione {
 	position: relative;
-	height: auto;
 }
 
 .carousel-captione:not(#aboutCaption-0) {
@@ -551,6 +589,24 @@ ul.services-list {
 
 			&::placeholder {
 				color: #666666;
+			}
+		}
+
+		&.is-valid {
+			border-color: #319d21;
+			color: #319d21;
+
+			&::placeholder {
+				color: #319d21;
+			}
+		}
+
+		&.is-invalid {
+			border-color: #fb0102;
+			color: #fb0102;
+
+			&::placeholder {
+				color: #fb0102;
 			}
 		}
 	}
