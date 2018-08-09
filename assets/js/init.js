@@ -155,14 +155,14 @@ jQuery(document).ready(function($) {
 
 
     /**
-     * We can't have a cpation going out of the carousel box because
+     * We can't have a caption going out of the carousel box because
      * of the overflow:hidden so we have a custom captions
      */
     $("#aboutCarousel").on('slide.bs.carousel', function(evt) {
 
         let step = $(evt.relatedTarget).index();
 
-        $('#aboutCaptions .carousel-captione:not(#aboutCaption-' + step + ')').fadeOut('fast', function() {
+        $('#aboutCaptions .carousel-captione:not(#aboutCaption-' + step + ')').hide('fast', function() {
             $('#aboutCaption-' + step).fadeIn();
         });
     });
@@ -177,68 +177,63 @@ jQuery(document).ready(function($) {
         $this.html( $this.attr('aria-expanded') == 'true' ? 'Read more' : 'Read less');
     });
 
-}); // jQuery end
 
-
-var tag = document.createElement( 'script' );
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName( 'script' )[ 0 ];
-firstScriptTag.parentNode.insertBefore( tag, firstScriptTag );
-
-var player;
-
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player( 'player', {
-        height: '315',
-        width: '560',
-        videoId: 'Ol35jqmLdNg',
-        playerVars : {
-            'controls' : 0,
-            'showinfo' : 0,
-            'rel' : 0,
-            'autoplay' : 1,
-            'loop' : 1,
-            'mute' : 1,
-            'modestbranding' : 1,
-            'playlist' : 'Ol35jqmLdNg',
-            'enablejsapi' : 1,
-            'origin' : 'https://pseudocode.agency'
-        },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
+    /**
+     * Add class to visible elements so we can add css
+     * accordingly
+     */
+    $('#projects .project:visible:last').addClass('last-visible');
+    $('#moreProjects').on('shown.bs.collapse', function () {
+        $('#projects .project').removeClass('last-visible');
+        $('#projects .project:visible:last').addClass('last-visible');
     });
-}
 
 
-function onPlayerReady( event ) {
-    event.target.playVideo();
-}
+    /**
+     * A fix for no swipe for Bootstrap 4 Carousel
+     *
+     * @see https://github.com/twbs/bootstrap/issues/17118#issuecomment-382643969
+     */
+    let touchStartX = null;
 
-// this is to track loops
-var playerStarted = false;
-
-function onPlayerStateChange( event ) {
-
-    var $heroImage = jQuery('#heroImage');
-
-    if ( event.data == YT.PlayerState.PLAYING ) {
-        if ( cleanTime() == 0 && !playerStarted ) {
-            playerStarted = true;
-
-            if ( $heroImage.is(':visible') ) {
-                $heroImage.fadeOut();
+    $('.carousel').each(function() {
+        let $carousel = $(this);
+        $(this).on('touchstart', function (event) {
+            let e = event.originalEvent;
+            if (e.touches.length == 1) {
+                let touch = e.touches[0];
+                touchStartX = touch.pageX;
             }
-        }
-    }
-}
+        }).on('touchmove', function (event) {
+            let e = event.originalEvent;
+            if (touchStartX != null) {
+                let touchCurrentX = e.changedTouches[0].pageX;
+                if ((touchCurrentX - touchStartX) > 60) {
+                    touchStartX = null;
+                    $carousel.carousel('prev');
+                } else if ((touchStartX - touchCurrentX) > 60) {
+                    touchStartX = null;
+                    $carousel.carousel('next');
+                }
+            }
+        }).on('touchend', function () {
+            touchStartX = null;
+        });
+    });
 
-// utility
-function cleanTime() {
-    return Math.round( player.getCurrentTime() );
-}
+
+    /**
+     * Disable autoplay video on mobile since
+     * we are hiding it anyway
+     */
+    let screenWidth = $(window).width();
+    if ( screenWidth < 768 ) {
+        $('video').removeAttr('autoplay');
+    } else {
+        $('video').attr('autoplay');
+    }
+
+}); // jQuery end
 
 // Sections animation on scroll
 window.sr = ScrollReveal({

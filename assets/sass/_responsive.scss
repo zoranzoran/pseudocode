@@ -60,6 +60,11 @@ img {
 
 		&-info {
 			padding-top: 50px;
+			padding-bottom: 0;
+
+			&:after {
+				display: none;
+			}
 		}
 
 		.title {
@@ -123,9 +128,10 @@ img {
 
 				&:after {
                     left: 30px;
-                    bottom: -10px;
+                    bottom: -14px;
                     width: calc( 100% - 60px );
                     background-color: $brand-primary;
+                    transition: all 0.35s;
 				}
         	}
 
@@ -148,7 +154,7 @@ img {
         			padding: 14px 20px;
         			border-radius: 26px;
         			border: 2px solid $white;
-        			//transition: all 0.35s;
+					transition: $btn-transition;
 
         			&:hover {
         				color: $brand-secondary;
@@ -455,9 +461,10 @@ img {
 		z-index: 15;
 		position: absolute;
 		display: block;
-		bottom: 70px;
-		right: -98px;
+		bottom: 18px;
+		right: -18px;
 		width: auto;
+		height: 68px;
 		font-size: 18px;
 		padding: 25px 50px;
 	}
@@ -466,8 +473,9 @@ img {
 		background-color: $brand-secondary;
 
 		&-info {
-			padding: 117px 0 0 0;
-			margin-left: 127px;
+			padding: 25px;
+			margin-left: 0;
+			max-width: 100%;
 
 			.title {
 				padding-bottom: 30px;
@@ -599,5 +607,32 @@ img {
 	    .header-brand {
 	    	margin-left: 80px;
 	    }
+	}
+
+	.carousel-captions {
+		bottom: 20px;
+	}
+
+	.about {
+		&-info {
+			padding: 80px 0 0 0;
+			margin-left: 90px;
+			max-width: 459px;
+		}
+	}
+
+}
+
+@media (min-width: 1600px) {
+
+	.carousel-captions {
+		bottom: 70px;
+	}
+
+	.about {
+		&-info {
+			padding: 117px 0 0 0;
+			margin-left: 127px;
+		}
 	}
 }
