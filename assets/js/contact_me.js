@@ -70,6 +70,12 @@ function getFormData() {
         }
     });
 
+    fields.push("urlReferrer");
+    data.urlReferrer = document.referrer;
+
+    fields.push("ipAddress");
+    data.ipAddress = document.ipAddress;
+
     data.formDataNameOrder = JSON.stringify(fields);
     data.formGoogleSheetName = form.dataset.sheet || "responses";
     data.formGoogleSendEmail = form.dataset.email || "";
