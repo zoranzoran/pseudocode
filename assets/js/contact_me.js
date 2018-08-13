@@ -76,6 +76,12 @@ function getFormData() {
     fields.push("ipAddress");
     data.ipAddress = document.ipAddress;
 
+    fields.push("url");
+    data.url = document.URL;
+
+    fields.push("userAgent");
+    data.userAgent = navigator.userAgent;
+    
     data.formDataNameOrder = JSON.stringify(fields);
     data.formGoogleSheetName = form.dataset.sheet || "responses";
     data.formGoogleSendEmail = form.dataset.email || "";
