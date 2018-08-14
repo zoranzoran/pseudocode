@@ -12,7 +12,7 @@ $(function () {
             xhr.onreadystatechange =
                 function () {
                     $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button disabled='' type='button' class='btn btn-callout is-valid'>I will, thank you!</button>")
+                    $('#success > .alert-success').html("<button disabled='' type='button' class='btn btn-callout is-valid'>Message was sent!</button>")
                         .append("</button>");
                     $('#success > .alert-success')
                         .append('</div>');
