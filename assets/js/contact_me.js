@@ -12,10 +12,8 @@ $(function () {
             xhr.onreadystatechange =
                 function () {
                     $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    $('#success > .alert-success').html("<button disabled='' type='button' class='btn btn-callout is-valid'>I will, thank you!</button>")
                         .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
                     $('#contactForm').trigger("reset");
