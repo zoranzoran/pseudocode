@@ -11,6 +11,7 @@ $(function () {
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onreadystatechange =
                 function () {
+                    $('#submit-button').hide();
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button disabled='' type='button' class='btn btn-callout is-valid'>Message was sent!</button>")
                         .append("</button>");

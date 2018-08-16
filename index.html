@@ -544,7 +544,7 @@
                 <p class="lead">Contact us at <a href="mailto:hi@pseudocode.agency"><strong>hi@pseudocode.agency</strong></a> or use the form below</p>
             </div>
 
-            <form id="contactForm" name="contactForm" method="post" class="contact-form" action="https://script.google.com/macros/s/AKfycbyQw6kSLLsa53FwQwAIkNFV8Quohd1H2oK6O1Fi63nv963qThuG/exec">
+            <form id="contactForm" novalidate name="contactForm" method="post" class="contact-form" action="https://script.google.com/macros/s/AKfycbyQw6kSLLsa53FwQwAIkNFV8Quohd1H2oK6O1Fi63nv963qThuG/exec">
                 <div class="row">
                     <div class="col-md-6 control-group">
                         <label for="yourEmail" class="sr-only">Your email address</label>
@@ -564,11 +564,11 @@
                 <div class="form-group control-group">
                     <label for="yourMessage" class="sr-only">Your message</label>
                     <div class="controls">
-                        <textarea class="form-control" id="yourMessage" name="message" placeholder="Tell us more about your project" required data-validation-required-message="Please enter your name"></textarea>
+                        <textarea class="form-control" id="yourMessage" name="message" placeholder="Tell us more about your project" required data-validation-required-message="Please leave us a message"></textarea>
                         <p class="help-block"></p>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-callout">Get in touch</button>
+                <button type="submit" class="btn btn-callout" id="submit-button">Get in touch</button>
             </form>
             <div class="section-header">
                 <h2 class="title"></h2>
