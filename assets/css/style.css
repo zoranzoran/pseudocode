@@ -1316,13 +1316,53 @@ img {
     padding: 117px 0 0 0;
     margin-left: 127px; } }
 
-
 .control-group.warning .form-control {
   border-bottom: 2px solid #fb0102;
   color: #fb0102;
 }
 
+.control-group.error .form-control {
+  border-bottom: 2px solid #fb0102;
+  color: #fb0102;
+}
+
+.control-group.error .form-control {
+  border-bottom: 2px solid #fb0102;
+  color: #fb0102;
+}
+
+.control-group.error input:invalid::-webkit-input-placeholder,
+.control-group.error textarea:invalid::-webkit-input-placeholder,
+.control-group.error select:invalid::-webkit-input-placeholder {
+  color: #fb0102;
+}
+
+.control-group.error input:invalid::placeholder,
+.control-group.error textarea:invalid::placeholder,
+.control-group.error select:invalid::placeholder {
+  color: #fb0102;
+}
+
 .control-group.success .form-control {
+  border-bottom: 2px solid #319d21;
+  color: #319d21;
+}
+
+.control-group input:valid,
+.control-group textarea:valid {
+  border-bottom: 2px solid #319d21;
+  color: #319d21;
+}
+
+.control-group input:valid::placeholder,
+.control-group textarea:valid::placeholder,
+.control-group select:valid::placeholder {
+  color: #319d21;
+}
+
+input:required:valid::-webkit-input-placeholder,
+textarea:required:valid::-webkit-input-placeholder,
+select:required:valid::-webkit-input-placeholder {
   border-bottom: 2px solid #319d21;
   color: #319d21;
 }
@@ -1332,7 +1372,11 @@ img {
   padding: 0;
 }
 
-.help-block ul li{
+.help-block {
+  display: none;
+}
+
+.help-block ul li {
   color: #fb0102;
 }
 
@@ -1340,37 +1384,11 @@ img {
   color: #fb0102;
 }
 
-/* input:required:valid,
-    textarea:required:valid,
-    select:required:valid {
-      color: #319d21;
-      border-bottom: 2px solid #319d21;
-    } */
-
 input:focus:required,
 textarea:focus:required,
 select:focus:required {
   border-bottom: 2px solid #2bb7da;
 }
-
-/* input:focus:required:invalid,
-textarea:focus:required:invalid,
-select:focus:required:invalid {
-  color: #fb0102;
-  border-bottom: 2px solid #fb0102;
-} */
-
-/* input:focus:required:invalid::-webkit-input-placeholder,
-    textarea:focus:required:invalid::-webkit-input-placeholder,
-    select:focus:required:invalid::-webkit-input-placeholder {
-      color: #fb0102;
-    }
-
-    input:focus:required:invalid:focus::-webkit-input-placeholder,
-    textarea:focus:required:invalid:focus::-webkit-input-placeholder,
-    select:focus:required:invalid:focus::-webkit-input-placeholder {
-      color: #fb0102;
-    } */
 
 .alert {
   padding: 0;
