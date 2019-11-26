@@ -156,8 +156,6 @@
 	}
 }
 
-.testimonial-test {}
-
 .testimonial {
 	display: flex;
 	flex-direction: column;
@@ -216,6 +214,166 @@
 	    		padding-bottom: 20px;
 	    	}
 	    }
+	}
+}
+
+// Single page - Gaming
+// Header testimonial section
+
+.testimonial-gaming {
+	display: none;
+
+	.lead {
+		font-size: 13px;
+		line-height: 20px;
+		padding-bottom: 20px;
+
+		& + .subtitle {
+			padding-bottom: 0;
+		}
+
+	    p {
+	    	margin: 0;
+	    	padding: 0;
+
+	    	&:not(:last-child) {
+	    		padding-bottom: 20px;
+	    	}
+	    }
+	}
+		
+}
+
+.testimonial-gaming__title {
+	flex: 1 1;
+	padding-left: 20px;
+
+	.title,
+	.subtitle {
+		padding-right: 0;
+		padding-bottom: 10px;
+	}
+
+	.title-gaming {
+		font-size: 42px;
+		line-height: 52px;
+		font-family: "Mont-Heavy", sans-serif;
+		font-weight: normal;
+		margin: 0;
+		color: white;
+	}
+
+	.subtitle {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.testimonial-gaming__body {
+	flex: 1 1;
+	padding-right: 80px;
+
+	.lead-gaming {
+		font-size: 18px;
+		color: white;
+		line-height: 1.5;
+	}
+}
+
+.testimonial-blockquote {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIG92ZXJmbG93PSJ2aXNpYmxlIiB2aWV3Qm94PSIwIDAgNjcuNDI0IDU1LjAyNyI+PGcgZmlsbD0iI0U5RTlFOSI+PHBhdGggZD0iTTI4LjczOCAyNS4wNFYwSDB2MjcuMzg5aDEzLjc0NGMwIDMuNTQ5LTEuMDQ5IDYuNDQ3LTMuMDk5IDguNzk3LTIuMTk5IDIuNDk4LTUuMzQ4IDMuOTQ3LTkuNDQ2IDQuMjk5djE0LjU0M2M4LjI5Ny0uNzUgMTQuOTQ0LTMuNzQ4IDE5Ljg5Mi05LjA0NyA1LjA5OC01LjQ0OCA3LjY0Ny0xMi4zOTUgNy42NDctMjAuOTQxek02Ny40MjQgMjUuMDRWMGgtMjguNzR2MjcuMzg5SDUyLjQzYzAgMy41NDktMS4wNTEgNi40NDctMy4xIDguNzk3LTIuMTk5IDIuNDk4LTUuMzQ4IDMuOTQ3LTkuNDQ1IDQuMjk5djE0LjU0M2M4LjI5NS0uNzUgMTQuOTQzLTMuNzQ4IDE5Ljg5MS05LjA0NyA1LjA5Ny01LjQ0OCA3LjY0OC0xMi4zOTUgNy42NDgtMjAuOTQxeiIvPjwvZz48L3N2Zz4=);
+	fill: white;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 55px;
+	height: 68px;
+	flex: 0 0 55px;
+}
+
+
+.testimonial-mobile {
+	background-color: $brand-secondary;
+	min-height: 1px;
+    max-width: 1140px;
+    flex-basis: 100%;
+    flex-grow: 1;
+	padding: 44px;
+    margin: auto;
+}
+
+.testimonial-gaming__mobile-header {
+
+	position: relative;
+	max-width: 50%;
+	
+	&::after {
+		position: absolute;
+		display: block;
+		content: "";
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIG92ZXJmbG93PSJ2aXNpYmxlIiB2aWV3Qm94PSIwIDAgNjcuNDI0IDU1LjAyNyI+PGcgZmlsbD0iI0U5RTlFOSI+PHBhdGggZD0iTTI4LjczOCAyNS4wNFYwSDB2MjcuMzg5aDEzLjc0NGMwIDMuNTQ5LTEuMDQ5IDYuNDQ3LTMuMDk5IDguNzk3LTIuMTk5IDIuNDk4LTUuMzQ4IDMuOTQ3LTkuNDQ2IDQuMjk5djE0LjU0M2M4LjI5Ny0uNzUgMTQuOTQ0LTMuNzQ4IDE5Ljg5Mi05LjA0NyA1LjA5OC01LjQ0OCA3LjY0Ny0xMi4zOTUgNy42NDctMjAuOTQxek02Ny40MjQgMjUuMDRWMGgtMjguNzR2MjcuMzg5SDUyLjQzYzAgMy41NDktMS4wNTEgNi40NDctMy4xIDguNzk3LTIuMTk5IDIuNDk4LTUuMzQ4IDMuOTQ3LTkuNDQ1IDQuMjk5djE0LjU0M2M4LjI5NS0uNzUgMTQuOTQzLTMuNzQ4IDE5Ljg5MS05LjA0NyA1LjA5Ny01LjQ0OCA3LjY0OC0xMi4zOTUgNy42NDgtMjAuOTQxeiIvPjwvZz48L3N2Zz4=);
+		fill: white;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 66px;
+		height: 78px;
+		top: 0;
+		right: -100%;
+		transform: translate(-33px, 0);
+	}
+	.title-gaming__mobile {
+		font-size: 32px;
+		padding-bottom: 0;
+		margin-bottom: 10px;
+		color: white;
+		line-height: 1.25;
+	}
+}
+
+// Single page - Gaming
+// Services section
+
+.services-gaming__list {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 80px;
+	list-style: none;
+	counter-reset: my-awesome-counter;
+	display: flex;
+  	flex-wrap: wrap;
+	li{
+		counter-increment: my-awesome-counter;
+		display: flex;
+		font-family: $font-family-sans-serif-heavy;
+		font-size: 24px;
+		border-bottom: 2px solid #f9f9f9;
+		width: 100%;
+		padding: 30px;
+		&::before{
+			content: "0" counter(my-awesome-counter);
+			color: $brand-primary;
+			font-family: $font-family-sans-serif-heavy;
+			margin-right: 30px;
+		}
+	}
+}
+
+.services-gaming__list-heading {
+	height: 240px;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $font-family-sans-serif-heavy;
+
+	&.channels {
+		background-color: $brand-secondary;
+	}
+
+	&.verticals {
+		background-color: $brand-primary;
 	}
 }
 
@@ -558,6 +716,45 @@ ul.services-list {
 		    }
 		}
 	}
+
+	&.contact--gaming {
+		background-color: $brand-secondary;
+
+		.section-header {
+			padding-bottom: 0;
+
+			.title {
+				padding-bottom: 25px;
+				color: white
+			}
+
+			.lead {
+				padding-bottom: 10px;
+				font-size: 13px;
+				line-height: 20px;
+				color: white
+			}
+
+			a {
+				position: relative;
+
+				&:hover {
+					color: $brand-gray;
+					text-decoration: none;
+
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: -5px;
+						width: 100%;
+						height: 1px;
+						background-color: $brand-gray;
+					}
+				}
+			}
+		}
+	}
 }
 
 .contact-form {
@@ -575,7 +772,7 @@ ul.services-list {
 		border: 0;
 		border-bottom: 2px solid $brand-grey-lighter;
 		border-radius: 0;
-		background-color: $brand-grey-lightest;
+		background-color: transparent;
 		transition: border-color .35s ease-in-out,box-shadow .35s ease-in-out;
 
 		&::placeholder {

@@ -16,6 +16,10 @@ img {
 			padding-right: 0;
 		}
 	}
+	.title-gaming__mobile {
+		margin-bottom: 0 !important;
+	 }
+
 }
 
 @media (min-width: 768px) {
@@ -86,6 +90,14 @@ img {
 	        background-position: 30px 0;
 	        margin-left: 0;
 		}
+	}
+	.testimonial-gaming {
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+	.testimonial-mobile {
+		display: none;
 	}
 }
 
@@ -343,18 +355,30 @@ img {
 	        span {
 	            display: block;
 	        }
-
-	        strong {
-
-	        }
-	    }
-
+		}
+		
+		
 	    .lead {
 	        line-height: 1.5;
 	        font-size: 24px;
-
 	        padding-bottom: 50px;
-	    }
+		}
+		
+		&.hero-welcome--gaming {
+
+			.title.title {
+				font-size: 70px;
+
+				span {
+					display: inline-block;
+				}
+			}
+
+			.title--gaming {
+				padding-bottom: 70px;
+			}
+	
+		}
 	}
 
 	.btn-callout {
@@ -519,6 +543,22 @@ img {
 				line-height: 1;
 			}
 		}
+
+		&.contact--gaming {
+			.section-header {
+				padding-bottom: 0;
+
+				.title {
+					padding-bottom: 25px;
+				}
+
+				.lead {
+					padding-bottom: 10px;
+					font-size: 18px;
+					line-height: 1;
+				}
+			}
+		}
 	}
 
 
@@ -634,5 +674,29 @@ img {
 			padding: 117px 0 0 0;
 			margin-left: 127px;
 		}
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+	.testimonial-gaming__body {
+		flex: 0 0 100%;
+		margin-bottom: 35px;
+		.lead-gaming {
+			font-size: 16px;
+			max-width: 640px;
+		}
+	}
+
+	.testimonial-gaming__title {
+		.title-gaming {
+			font-size: 32px;
+			line-height: 42px;
+		}
+	}
+
+	.testimonial-blockquote{
+		width: 33px;
+		height: 48px;
+		flex: 0 0 33px;
 	}
 }
