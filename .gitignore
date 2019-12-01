@@ -1,0 +1,5 @@
+# Ignoring folders and files
+node_modules
+gulpfile.js
+package.json
+package-lock.json

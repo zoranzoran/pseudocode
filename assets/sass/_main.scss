@@ -757,6 +757,28 @@ ul.services-list {
 	}
 }
 
+.contact-light {
+	.contact-form {
+		.form-control {
+			color: #666666;
+		}
+		.help-block{
+			color: #666666;
+		}
+	}
+}
+
+.contact-dark {
+	.contact-form {
+		.form-control {
+			color: white;
+		}
+		.help-block{
+			color: white;
+		}
+	}
+}
+
 .contact-form {
 
 	padding-left: 40px;
@@ -768,7 +790,6 @@ ul.services-list {
 
 	.form-control {
 		padding: 10px 0;
-		color: #666666;
 		border: 0;
 		border-bottom: 2px solid $brand-grey-lighter;
 		border-radius: 0;
